@@ -1,0 +1,51 @@
+package hw;
+
+import java.util.Scanner;
+
+public class Hw4 {
+
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
+		System.out.print("입력: "); int m = stdIn.nextInt();
+		
+		int[][] matrix = new int[m][m];
+		int size = m;
+		
+		for(int i = 0; i < m; i++) {
+			int j = m-i-1;
+			matrix[i][j] = m;
+			if(i >= m-1) break;  //큰 대각선 마지막 요소 채우면 종료
+			
+			int x = i, y = j, tmp = m;			
+			for(int h = 1; h <= m/2; h++) {
+				if(y <= 0) break;
+				matrix[++x][j] = --tmp;
+				if(h == m/2 && m%2 == 0) break;  //홀짝 여부에 따른 종료조건
+				matrix[i][--y] = --tmp;
+			}
+		}
+		
+		
+		int val = 1, jmp = m/2;
+		if(m%2 != 0) {
+			val = 2; jmp = m/2+1;
+		}
+	
+		for(int sum = m/2-1; sum >= 0; sum--) {
+			for(int i = sum; i >= 0; i--) {
+				matrix[i][sum-i] = val;
+				if(m%2==0 && sum==m/2-1) continue;
+				matrix[i+jmp][sum-i+jmp] = val-1;
+			}
+			jmp++;
+			val += 2;
+		}
+		
+		for(int x = 0; x < size; x++) {
+			for(int y = 0; y < size; y++) {
+				System.out.print(matrix[x][y] + " ");
+			}
+			System.out.println();
+		}
+	}
+}

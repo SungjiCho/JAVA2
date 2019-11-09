@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;CryingBeat&apos;&#x0A;- Original project: &apos;CryingBeat&apos;&#x0A;- Original element: &apos;CryingBeat/src/javazoom.jl.player&apos;" description="Delete element" element1="/src&lt;javazoom.jl.player" element2="/src&lt;javazoom.jl" element3="/src&lt;javazoom" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1567145250864" subPackages="false" version="1.0"/>
+</session>

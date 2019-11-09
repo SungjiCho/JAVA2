@@ -1,0 +1,26 @@
+package hw;
+
+import java.util.Scanner;
+import static java.lang.Math.sqrt;
+
+
+public class Hw3 {
+	public static void main(String[] args) {
+		
+		Scanner stdIn = new Scanner(System.in);
+		System.out.print("n: "); int n = stdIn.nextInt(); 
+		
+		for(int x = 0; x <= n*2; x++) {
+			for(int y = 0; y <= n*2; y++) {
+				int dt = (int)sqrt((x-n)*(x-n) + (y-n)*(y-n));
+				
+				if(dt <= n)
+					System.out.print("* ");
+				else
+					System.out.print("  ");
+			}
+			System.out.println();
+		}
+		stdIn.close();
+	}
+}
