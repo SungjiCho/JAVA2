@@ -1,0 +1,23 @@
+package networkex;
+
+import java.net.*;
+
+public class NetworkEx3 {
+	public static void main(String[] args) {
+		URL url = null;
+		String address = "https://cran.r-project.org/web/packages/EFAutilities/EFAutilities.pdf";
+		
+		try {
+			url = new URL(address);
+			
+			/*Http URLConnection 반환(URL프로토콜이 http프로토콜이라면)
+			 *URLConnection을 사용해서 연결하고자 하는 자원에 접근하고 읽고 쓰기를 할 수 있음*/
+			URLConnection conn = url.openConnection();
+			
+			System.out.println("conn.toString() :" + conn);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

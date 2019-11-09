@@ -1,0 +1,14 @@
+package networkex;
+
+import java.net.*;
+
+public class NetworkEx2 {
+	public static void main(String[] args) throws Exception {
+		
+		URL url = new URL("https://developer.spotify.com/documentation/web-api/quick-start/");
+		
+		System.out.println("url.getAuthority() :" + url.getAuthority()); //호스트명과 포트를 문자열로 반환
+		
+
+	}
+}

@@ -1,0 +1,23 @@
+package networkex;
+
+import java.net.*;
+import java.util.*;
+
+public class NetworkEx1 {
+	public static void main(String[] args) {
+		
+		//IP주소 다루는 클래스
+		InetAddress ip = null;
+		InetAddress[] ipArr = null;
+		
+		try {
+			ip = InetAddress.getByName("www.naver.com"); //도메인명(host)을 통해 IP주소 얻기
+			System.out.println("getHostName() :" + ip.getHostName()); //호스트의 이름을 반환
+			System.out.println("getHostAddress() :" + ip.getHostAddress()); //호스트의 IP주소를 반환
+			System.out.println("toString() :" + ip.toString());
+		}catch(UnknownHostException e) {
+			e.printStackTrace();
+		}
+
+	}
+}
