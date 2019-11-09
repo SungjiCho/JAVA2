@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Jun 16 10:40:31 KST 2019
+org.eclipse.jst.jee.server\:web02=/usr/local/Cellar/tomcat@8/8.5.41/libexec/webapps/web02
+org.eclipse.jst.jee.server\:web01=/usr/local/Cellar/tomcat@8/8.5.41/libexec/webapps/web01

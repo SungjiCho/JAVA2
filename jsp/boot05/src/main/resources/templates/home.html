@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org" 
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+ layout:decorator="~{layout/common_layout}">
+
+<head>
+<title>Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="content-script.js"></script>
+</head>
+
+<body>
+  
+  <section layout:fragment="content">
+    <p>Welcome to Mind Code</p>
+	<ul>
+		<li><a th:href="@{/experts}">START</a></li>	
+	</ul>    
+  </section>
+
+</body>
+</html>
